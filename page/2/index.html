@@ -67,7 +67,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 25
+			文章总数 27
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -164,6 +164,179 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20190921_Essay_学会讲故事01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/读书笔记/学会讲故事01.html">学会讲故事01</a>
+    </h1>
+  
+
+        
+        <a href="/读书笔记/学会讲故事01.html" class="archive-article-date">
+  	<time datetime="2019-09-21T05:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何通过故事构建场景，营造氛围，实现代入感，进而提升购买的欲望？</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/读书笔记/学会讲故事01.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20190805_[ES6]_Promise和setTimeout的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/技术/promise和settimeout的区别.html">Promise和setTimeout的区别</a>
+    </h1>
+  
+
+        
+        <a href="/技术/promise和settimeout的区别.html" class="archive-article-date">
+  	<time datetime="2019-08-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0-面试题"><a href="#0-面试题" class="headerlink" title="0 面试题"></a>0 面试题</h2><p>面试题：下面代码的输出结果是什么？</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'start'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      resolve(<span class="number">1</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    p1.then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'==&gt;res:'</span>, res);</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'end'</span>);</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>答案是???</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/技术/promise和settimeout的区别.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20190725_[React]_diff算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -187,8 +360,6 @@
         <h2 id="1-diff简介"><a href="#1-diff简介" class="headerlink" title="1.diff简介"></a>1.diff简介</h2><img src="/assets/blogImg/React高性能原理图.JPG">
 
 <p>作用：计算出Virtual DOM中<strong>真正变化</strong>的部分，并只针对该部分进行原生DOM操作，而非渲染整个页面，从而达到<strong>高效渲染</strong></p>
-        
-          <a class="article-more-a" href="/技术/diff算法.html#more">more >></a>
         
       
 
@@ -288,8 +459,6 @@
 
 <p>怎样才能使得<code>Form.Item</code> 包裹一个第三方组件或者自定义组件时，在点击submit时可以获取到对应组件的值呢？</p>
         
-          <a class="article-more-a" href="/技术/antd-form中用自定义组件submit获取不到对应的值.html#more">more >></a>
-        
       
 
       
@@ -380,8 +549,6 @@
 <li>非严格模式：<code>fun</code>中的<code>this</code>绑定到全局对象，函数运行时<code>this</code>指向顶层对象（浏览器为window）</li>
 <li>严格模式：<code>fun</code>的<code>this</code>为<code>undefined</code></li>
 </ul>
-        
-          <a class="article-more-a" href="/技术/深入理解call-aplly和bind.html#more">more >></a>
         
       
 
@@ -761,183 +928,6 @@
 
 
   
-    <article id="post-20190509_[Notes]_如何快速学习一门技术" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/如何快速学习一门技术.html">如何快速学习一门技术</a>
-    </h1>
-  
-
-        
-        <a href="/读书笔记/如何快速学习一门技术.html" class="archive-article-date">
-  	<time datetime="2019-05-09T05:55:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><strong>高手指点：遇见高手早点混熟</strong></p>
-</blockquote>
-<p><em>2019-5-9：做任何事都不要埋头死干，要寻求身边的资源来让自己花最小的成本，最少的时间，最快的掌握、使用这门技术。毕竟你最终的目的就是为了学会如何使用这门技术。在别人的经验基础之上去学习可以少走很多弯路。遇见比自己厉害的人投其所好的和他混熟，方便日后向他请教问题。</em></p>
-        
-          <a class="article-more-a" href="/读书笔记/如何快速学习一门技术.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/如何快速学习一门技术.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20180922_[JS]_2018云栖大会-机器革命 人工智能峰会" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html">2018云栖大会-机器革命 人工智能峰会</a>
-    </h1>
-  
-
-        
-        <a href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html" class="archive-article-date">
-  	<time datetime="2018-09-22T13:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、陈丽娟——阿里巴巴人工智能实验室总经理"><a href="#一、陈丽娟——阿里巴巴人工智能实验室总经理" class="headerlink" title="一、陈丽娟——阿里巴巴人工智能实验室总经理"></a>一、陈丽娟——阿里巴巴人工智能实验室总经理</h2><h3 id="1-这个时代的创新机会在哪儿？"><a href="#1-这个时代的创新机会在哪儿？" class="headerlink" title="1.这个时代的创新机会在哪儿？"></a>1.这个时代的创新机会在哪儿？</h3><p>​    完全的创新机会是很小的，<strong>重组（自由组合）</strong>才是这个时代的重要创新来源</p>
-        
-          <a class="article-more-a" href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1055,10 +1045,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Ant Design</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
@@ -1072,6 +1058,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">生活感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Ant Design</a>
               </li>
             
             <div class="clearfix"></div>
