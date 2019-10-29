@@ -6,25 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
-  <title>学会讲故事01 | 云生流长的博客</title>
+  <title>《JavaScript数据结构与算法》—— 栈 | 云生流长的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何通过故事构建场景，营造氛围，实现代入感，进而提升购买的欲望？">
-<meta name="keywords" content="技能分享">
+  <meta name="description" content="1.什么是栈？栈是一种遵循后进先出（LIFO）原则的有序集合。新添加的元素或者待删除的元素都保存在栈的末尾——栈顶，另一端则叫做栈底。">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学会讲故事01">
-<meta property="og:url" content="//litten.me/读书笔记/学会讲故事01.html">
+<meta property="og:title" content="《JavaScript数据结构与算法》—— 栈">
+<meta property="og:url" content="//litten.me/技术/《javascript数据结构与算法》——-栈.html">
 <meta property="og:site_name" content="云生流长的博客">
-<meta property="og:description" content="如何通过故事构建场景，营造氛围，实现代入感，进而提升购买的欲望？">
+<meta property="og:description" content="1.什么是栈？栈是一种遵循后进先出（LIFO）原则的有序集合。新添加的元素或者待删除的元素都保存在栈的末尾——栈顶，另一端则叫做栈底。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//litten.me/assets/blogImg/客厅.jpg">
-<meta property="og:image" content="//litten.me/assets/blogImg/阳台.jpg">
-<meta property="og:image" content="//litten.me/assets/blogImg/卧室.jpg">
-<meta property="og:image" content="//litten.me/assets/blogImg/办公室.jpg">
-<meta property="og:updated_time" content="2019-10-29T15:16:48.040Z">
+<meta property="og:image" content="//litten.me/assets/blogImg/栈_01.jpg">
+<meta property="og:image" content="//litten.me/assets/blogImg/栈_添加.jpg">
+<meta property="og:image" content="//litten.me/assets/blogImg/栈_移除.jpg">
+<meta property="og:updated_time" content="2019-10-29T15:18:55.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学会讲故事01">
-<meta name="twitter:description" content="如何通过故事构建场景，营造氛围，实现代入感，进而提升购买的欲望？">
-<meta name="twitter:image" content="//litten.me/assets/blogImg/客厅.jpg">
+<meta name="twitter:title" content="《JavaScript数据结构与算法》—— 栈">
+<meta name="twitter:description" content="1.什么是栈？栈是一种遵循后进先出（LIFO）原则的有序集合。新添加的元素或者待删除的元素都保存在栈的末尾——栈顶，另一端则叫做栈底。">
+<meta name="twitter:image" content="//litten.me/assets/blogImg/栈_01.jpg">
   
     <link rel="alternative" href="/atom.xml" title="云生流长的博客" type="application/atom+xml">
   
@@ -171,33 +170,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-随笔/20190921_Essay_学会讲故事01" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-技术/JavaScript数据结构与算法/20191028_[JS]_JavaScript数据结构与算法_栈" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      学会讲故事01
+      《JavaScript数据结构与算法》—— 栈
     </h1>
   
 
         
-        <a href="/读书笔记/学会讲故事01.html" class="archive-article-date">
-  	<time datetime="2019-09-21T05:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
+        <a href="/技术/《javascript数据结构与算法》——-栈.html" class="archive-article-date">
+  	<time datetime="2019-10-28T14:04:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>如何通过故事构建场景，营造氛围，实现代入感，进而提升购买的欲望？</p>
+        <h2 id="1-什么是栈？"><a href="#1-什么是栈？" class="headerlink" title="1.什么是栈？"></a>1.什么是栈？</h2><p><strong>栈</strong>是一种遵循后进先出（LIFO）原则的有序集合。新添加的元素或者待删除的元素都保存在栈的末尾——栈顶，另一端则叫做栈底。</p>
+<img src="/assets/blogImg/栈_01.jpg">
+
 <a id="more"></a>
 
-<img src="/assets/blogImg/客厅.jpg">
-<img src="/assets/blogImg/阳台.jpg">
-<img src="/assets/blogImg/卧室.jpg">
-<img src="/assets/blogImg/办公室.jpg">
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Stack</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> items = [];</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span> (<span class="params">ele</span>) </span>&#123;</span><br><span class="line">       items.push(ele);</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items.pop();</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.peek = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items[items.length - <span class="number">1</span>];</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items.length === <span class="number">0</span>;</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items.length;</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       items = [];</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(items.toString());</span><br><span class="line">     &#125;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-栈的添加和移除"><a href="#2-栈的添加和移除" class="headerlink" title="2 栈的添加和移除"></a>2 栈的添加和移除</h2><p>栈的添加：</p>
+<img src="/assets/blogImg/栈_添加.jpg">
+
+
+<p>栈的移除：</p>
+<img src="/assets/blogImg/栈_移除.jpg">
+
+
+
       
 
       
@@ -241,7 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -253,7 +261,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -271,18 +279,9 @@
   
 <nav id="article-nav">
   
-    <a href="/读书笔记/如何正确学习英语.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          如何正确学习英语
-        
-      </div>
-    </a>
   
-  
-    <a href="/随笔/《哪吒之魔童降世》观后感.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《哪吒之魔童降世》观后感</div>
+    <a href="/随笔/再次充满激情.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">再次充满激情</div>
       <i class="icon-circle-right"></i>
     </a>
   
