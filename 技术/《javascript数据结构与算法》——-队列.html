@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
-  <title>Archives: 2019/6 | 云生流长的博客</title>
+  <title>《JavaScript数据结构与算法》—— 队列 | 云生流长的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="云生流长的博客">
-<meta property="og:url" content="//litten.me/archives/2019/06/index.html">
+  <meta name="description" content="1.什么是队列？队列是一种遵循先进先出（FIFO）原则的一组有序的项。 队列在末尾添加新的元素，并在顶部移除元素。">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《JavaScript数据结构与算法》—— 队列">
+<meta property="og:url" content="//litten.me/技术/《javascript数据结构与算法》——-队列.html">
 <meta property="og:site_name" content="云生流长的博客">
+<meta property="og:description" content="1.什么是队列？队列是一种遵循先进先出（FIFO）原则的一组有序的项。 队列在末尾添加新的元素，并在顶部移除元素。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="//litten.me/assets/blogImg/队列_01.jpg">
+<meta property="og:updated_time" content="2019-10-31T14:33:07.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="云生流长的博客">
+<meta name="twitter:title" content="《JavaScript数据结构与算法》—— 队列">
+<meta name="twitter:description" content="1.什么是队列？队列是一种遵循先进先出（FIFO）原则的一组有序的项。 队列在末尾添加新的元素，并在顶部移除元素。">
+<meta name="twitter:image" content="//litten.me/assets/blogImg/队列_01.jpg">
   
     <link rel="alternative" href="/atom.xml" title="云生流长的博客" type="application/atom+xml">
   
@@ -162,120 +168,148 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-技术/JavaScript/JavaScript数据结构与算法/20191031_[JS]_JavaScript数据结构与算法_队列" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/读书笔记/《简七理财系列》-02-2个微习惯，拥有第1桶金.html" class="archive-article-date">
-  	<time datetime="2019-06-04T06:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/读书笔记/《简七理财系列》-02-2个微习惯，拥有第1桶金.html">《简七理财系列》-02 2个微习惯，拥有第1桶金</a>
+    <h1 class="article-title" itemprop="name">
+      《JavaScript数据结构与算法》—— 队列
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/技术/《javascript数据结构与算法》——-队列.html" class="archive-article-date">
+  	<time datetime="2019-10-31T14:04:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-什么是队列？"><a href="#1-什么是队列？" class="headerlink" title="1.什么是队列？"></a>1.什么是队列？</h2><p><strong>队列</strong>是一种遵循先进先出（FIFO）原则的一组有序的项。</p>
+<p>队列在末尾添加新的元素，并在顶部移除元素。</p>
+<img src="/assets/blogImg/队列_01.jpg">
+
+<a id="more"></a>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Stack</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> items = [];</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.enqueue = <span class="function"><span class="keyword">function</span> (<span class="params">ele</span>) </span>&#123;</span><br><span class="line">       items.push(ele);</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.dequeue = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items.shift();</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.front = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items[<span class="number">0</span>];</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items.length === <span class="number">0</span>;</span><br><span class="line">     &#125;;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> items.length</span><br><span class="line">     &#125;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              我
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>如需讨论，请加微信！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/constImg/weixin_concat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/读书笔记/《简七理财系列》-01-掌握1个公式，变富不再难.html" class="archive-article-date">
-  	<time datetime="2019-06-02T06:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/技术/《javascript数据结构与算法》——-链表.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          《JavaScript数据结构与算法》—— 链表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/技术/《javascript数据结构与算法》——-栈.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《JavaScript数据结构与算法》—— 栈</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/读书笔记/《简七理财系列》-01-掌握1个公式，变富不再难.html">《简七理财系列》-01 掌握1个公式，变富不再难</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -298,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
-  <title>对近来一些事的反思 | 云生流长的博客</title>
+  <title>《JavaScript数据结构与算法》—— 链表 | 云生流长的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近经历了找工作不顺、在职老大（Gary）帮我提涨薪的事，有很多的感慨和收获，刚好国庆放假就起了个早整理一下。">
-<meta name="keywords" content="反思总结">
+  <meta name="description" content="1.什么是链表？ 链表是存储有序元素的集合，但不同于数组，链表中的元素在内存中并不是连续放置的。 每个元素由存储元素本身的节点和一个指向下一个元素的引用（指针）组成。 图片/ 2.链表和数组的区别链表的优点：添加或移除元素的时候不需要移动其他元素； 链表的缺点：数组可以访问任何位置的元素，但链表需要从起点（表头）开始迭代列表直到找到所需的元素； 3.创建链表">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对近来一些事的反思">
-<meta property="og:url" content="//litten.me/随笔/对近来一些事的反思.html">
+<meta property="og:title" content="《JavaScript数据结构与算法》—— 链表">
+<meta property="og:url" content="//litten.me/技术/《javascript数据结构与算法》——-链表.html">
 <meta property="og:site_name" content="云生流长的博客">
-<meta property="og:description" content="最近经历了找工作不顺、在职老大（Gary）帮我提涨薪的事，有很多的感慨和收获，刚好国庆放假就起了个早整理一下。">
+<meta property="og:description" content="1.什么是链表？ 链表是存储有序元素的集合，但不同于数组，链表中的元素在内存中并不是连续放置的。 每个元素由存储元素本身的节点和一个指向下一个元素的引用（指针）组成。 图片/ 2.链表和数组的区别链表的优点：添加或移除元素的时候不需要移动其他元素； 链表的缺点：数组可以访问任何位置的元素，但链表需要从起点（表头）开始迭代列表直到找到所需的元素； 3.创建链表">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-29T15:16:48.070Z">
+<meta property="og:updated_time" content="2019-11-03T14:03:25.386Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对近来一些事的反思">
-<meta name="twitter:description" content="最近经历了找工作不顺、在职老大（Gary）帮我提涨薪的事，有很多的感慨和收获，刚好国庆放假就起了个早整理一下。">
+<meta name="twitter:title" content="《JavaScript数据结构与算法》—— 链表">
+<meta name="twitter:description" content="1.什么是链表？ 链表是存储有序元素的集合，但不同于数组，链表中的元素在内存中并不是连续放置的。 每个元素由存储元素本身的节点和一个指向下一个元素的引用（指针）组成。 图片/ 2.链表和数组的区别链表的优点：添加或移除元素的时候不需要移动其他元素； 链表的缺点：数组可以访问任何位置的元素，但链表需要从起点（表头）开始迭代列表直到找到所需的元素； 3.创建链表">
   
     <link rel="alternative" href="/atom.xml" title="云生流长的博客" type="application/atom+xml">
   
@@ -166,63 +166,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-随笔/20190925_Esssy_ 对近来一些事的反思" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-技术/JavaScript/JavaScript数据结构与算法/20191103_[JS]_JavaScript数据结构与算法_链表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      对近来一些事的反思
+      《JavaScript数据结构与算法》—— 链表
     </h1>
   
 
         
-        <a href="/随笔/对近来一些事的反思.html" class="archive-article-date">
-  	<time datetime="2019-10-01T01:44:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-01</time>
+        <a href="/技术/《javascript数据结构与算法》——-链表.html" class="archive-article-date">
+  	<time datetime="2019-11-03T02:34:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近经历了找工作不顺、在职老大（Gary）帮我提涨薪的事，有很多的感慨和收获，刚好国庆放假就起了个早整理一下。</p>
-<a id="more"></a>
-
-<h2 id="找工作不顺"><a href="#找工作不顺" class="headerlink" title="找工作不顺"></a>找工作不顺</h2><p>9月份忙着面试，也忙着工作上的事，但从3次面试的结果来看其实都不太理想，都没拿到offer，不过收获还是有的。通过面试让我大体知道了外面对一个4年左右前端的要求：</p>
-<ul>
-<li>技术栈不能太过单一，即使现在用的是React也要去了解下Vue的使用，对比二者的区别和各自的优势？</li>
-<li>对未来的职业规划是什么？专注前端了解后端？还是全栈？架构师？</li>
-<li>如何去选择一个第三方插件？需要考虑哪些点？</li>
-<li>如何做技术选型？</li>
-<li>原理性的概念</li>
-<li>…</li>
-</ul>
-<p>工作4年市场的要求已不仅仅是能完成业务代码，而是需要能有<strong>过硬的基础知识</strong>，能去<strong>领导</strong>、<strong>协调</strong>一群人去完成一项任务，去帮助解决项目中遇到的难点。</p>
-<p>反思我之前的工作内容：</p>
-<ul>
-<li><p>只是满足业务的需求</p>
-</li>
-<li><p>API调用程序员</p>
-</li>
-<li><p>只是埋头做，没有静下心来去反思</p>
-<ul>
-<li>没有了解前端项目的架构有哪些？目前项目使用的架构有哪些不足？可以如何改进？</li>
-<li>如何去完成一个公共组件？</li>
-<li>国际化前后端的实现方案各是怎样？目前流行的国际化实现方案是什么？我们为什么没有采用？</li>
-<li>入股让我负责一个小项目，我要怎么去统筹规划？怎么去制定开发时间？怎么去协调？</li>
-<li>。。。</li>
-</ul>
-</li>
-</ul>
-<h2 id="在职老大帮我提涨薪"><a href="#在职老大帮我提涨薪" class="headerlink" title="在职老大帮我提涨薪"></a>在职老大帮我提涨薪</h2><p>在部门老大知道我可能会去找工作的时候主动给HR提了给我涨薪的事，这是出乎我的意料之外的事。经过半个月的流程，昨天也终于有了初步的结果，涨薪10%。当老大亲口告诉我的时候我不知道该高兴还是难过。高兴是因为至少涨了，难过是因为涨薪的幅度太小，让人有些心寒。按照常理老大先是一通安慰，画饼自然也是少不了的。听完后我心里很不是滋味，公司根本看不到认真付出，有能力的人。但苦于目前还没找到合适的，所以也就只能先忍着，在这里加快学习的步伐，努力提升自己的技术能力，等找到合适的立马走人。</p>
-<p>我目前还没走的原因</p>
-<ul>
-<li>没找好下家，技术能力好需要提升（最重要的）</li>
-<li>深圳团队在扩建，我有机会成为前端的leader，可以锻炼我的领导和协调能力</li>
-<li>跟着Gary和Eric我还有东西可以学（当手下人都讨厌这个领导的时候或许我该想想为什么他会令人“讨厌”）</li>
-</ul>
-
+        <h2 id="1-什么是链表？"><a href="#1-什么是链表？" class="headerlink" title="1.什么是链表？"></a>1.什么是链表？</h2><p> <strong>链表</strong>是存储有序元素的集合，但不同于数组，链表中的元素在内存中并不是连续放置的。</p>
+<p>每个元素由存储元素本身的节点和一个指向下一个元素的引用（指针）组成。</p>
+<p>图片/</p>
+<h2 id="2-链表和数组的区别"><a href="#2-链表和数组的区别" class="headerlink" title="2.链表和数组的区别"></a>2.链表和数组的区别</h2><p>链表的优点：添加或移除元素的时候不需要移动其他元素；</p>
+<p>链表的缺点：数组可以访问任何位置的元素，但链表需要从起点（表头）开始迭代列表直到找到所需的元素；</p>
+<h2 id="3-创建链表"><a href="#3-创建链表" class="headerlink" title="3.创建链表"></a>3.创建链表</h2>
       
 
       
@@ -230,22 +199,17 @@
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
-              赏
+              我
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我喝咖啡！<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>如需讨论，请加微信！<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/constImg/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
                     
                     <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/constImg/weixinpay.png">
+                      <img class="reward-img" src="/assets/constImg/weixin_concat.jpg">
                       <span class="reward-type">微信</span>
                     </div>
                     
@@ -266,7 +230,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">反思总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -278,7 +242,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -296,18 +260,18 @@
   
 <nav id="article-nav">
   
-    <a href="/随笔/《老酒馆》观后感.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/随笔/《奶奶最懂得》纪录片.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          《老酒馆》观后感
+          《奶奶最懂得》纪录片
         
       </div>
     </a>
   
   
-    <a href="/随笔/面试引发的职业思考.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面试引发的职业思考</div>
+    <a href="/技术/《javascript数据结构与算法》——-队列.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《JavaScript数据结构与算法》—— 队列</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -433,35 +397,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Ant Design</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">反思总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
+                <a href="javascript:void(0)" class="js-tag color1">前端工程化</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">博客美文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -470,6 +418,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">生活感悟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Ant Design</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术分享</a>
               </li>
             
             <div class="clearfix"></div>
