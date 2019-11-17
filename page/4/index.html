@@ -67,7 +67,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 31
+			文章总数 28
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -163,289 +163,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-技术/JavaScript/20180720_[JS]_防抖和节流的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/防抖和节流的实现.html">防抖和节流的实现</a>
-    </h1>
-  
-
-        
-        <a href="/技术/防抖和节流的实现.html" class="archive-article-date">
-  	<time datetime="2018-07-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-防抖（debounce）"><a href="#1-防抖（debounce）" class="headerlink" title="1 防抖（debounce）"></a>1 防抖（debounce）</h2><p>常见的滚动监听事件，每次滚动都会触发，如此太过浪费性能，要如何优化呢？</p>
-<p><strong>思路</strong>：在第一次触发事件的时候，不是立即执行函数，而是给出一个<code>delay</code>时间值，例如<code>200ms</code></p>
-<ul>
-<li>如果在<code>200ms</code>内没有再次触发该事件，则执行函数</li>
-<li>如果在<code>200ms</code>内有再次触发事件，则清除当前的计时器，重新开始计时器</li>
-</ul>
-<p><strong>效果</strong>：短时间内大量出发同一事件最终只会执行一次</p>
-<p><strong>实现</strong>：利用<code>setTimeOut</code>来实现计时器的功能</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="keyword">const</span> debounce = <span class="function">(<span class="params">fn, delay</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @param [Function] fn 需要使用防抖的函数</span></span><br><span class="line"><span class="comment">     * @param [Number] delay 毫秒，防抖期限值</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">            <span class="comment">// 进入此分支说明：当前正在一个计时周期中，并且再次触发了事件,取消当前计时，重新开始计时</span></span><br><span class="line">            clearTimeout(timer)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 进入此分支说明：当前没有计时，则开始新的计时</span></span><br><span class="line">        timer = setTimeout(fn, delay)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> showTop = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> scrollTop = <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement.scrollTop</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'当前位置：'</span> + scrollTop)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.onscroll = debounce(showTop, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>定义</strong>：<strong>短时间内连续触发的事件，防抖可以让在某个时间期限内事件函数只执行一次</strong></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/防抖和节流的实现.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术/JavaScript/20180715_[JS]_作用域和闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/作用域和闭包.html">作用域和闭包</a>
-    </h1>
-  
-
-        
-        <a href="/技术/作用域和闭包.html" class="archive-article-date">
-  	<time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-什么是作用域？如何理解作用域链？"><a href="#1-什么是作用域？如何理解作用域链？" class="headerlink" title="1 什么是作用域？如何理解作用域链？"></a>1 什么是作用域？如何理解作用域链？</h2><h3 id="1-1-作用域：当前执行代码对变量的访问权限"><a href="#1-1-作用域：当前执行代码对变量的访问权限" class="headerlink" title="1.1  作用域：当前执行代码对变量的访问权限"></a>1.1  作用域：当前执行代码对变量的访问权限</h3><ul>
-<li>作用域最大的用处就是<strong>隔离变量</strong>，不同作用域下同名变量不会有冲突</li>
-<li>作用域中变量的值是在执行过程中产生并确定的，但作用域却是在函数创建的时候确定的</li>
-</ul>
-<img src="/assets/blogImg/作用域.JPG">
-
-<h3 id="1-2-作用域链"><a href="#1-2-作用域链" class="headerlink" title="1.2  作用域链"></a>1.2  作用域链</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">f</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">20</span>;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        f();</span><br><span class="line">    &#125;)()</span><br><span class="line">&#125;</span><br><span class="line">show(fn);   <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
-
-<p>​    在作用域中使用的变量，却没有在当前作用域中声明，则需要到另一个作用域中取</p>
-<p>​    要到<strong>创建</strong>这个函数的作用域中取值，而非<strong>调用</strong>这个函数的作用域中取值</p>
-<p>​    如果在上一个作用域中没有找到就继续向上跨，知道跨到全局作用域为止</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/作用域和闭包.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术/JavaScript/20180707_[JS]_深入理解JS变量提升和函数提升" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/深入理解js变量提升和函数提升.html">深入理解JS变量提升和函数提升</a>
-    </h1>
-  
-
-        
-        <a href="/技术/深入理解js变量提升和函数提升.html" class="archive-article-date">
-  	<time datetime="2018-07-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-作用域简介"><a href="#1-作用域简介" class="headerlink" title="1 作用域简介"></a>1 作用域简介</h3><ul>
-<li>作用域最大的用处：隔离变量，不同作用域下同名变量之间不会有冲突</li>
-<li>作用域中变量值在执行过程中产生，而作用域却是在函数创建时确定了</li>
-</ul>
-<img src="/assets/blogImg/作用域01.JPG">
-
-
-
-<h3 id="2-变量提升"><a href="#2-变量提升" class="headerlink" title="2 变量提升"></a>2 变量提升</h3><p>在<code>ES6</code>还没有出来的之前，JavaScript只有<strong>全局作用域</strong>和<strong>函数作用域</strong>，并没有<strong>块级作用域</strong>（一个{ }即为一个块级作用域）的概念。无论var声明的变量处于当前作用域的第几行，都会被提升到作用域的头部，并被初始化为undefined——<strong>变量提升</strong></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/深入理解js变量提升和函数提升.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
     <article id="post-技术/JavaScript/20180630_[JS]_GET和POST的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -919,11 +636,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
+                <a href="javascript:void(0)" class="js-tag color5">生活感悟</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">生活感悟</a>
+                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -947,11 +664,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color1">Ant Design</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Ant Design</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
             
             <div class="clearfix"></div>
