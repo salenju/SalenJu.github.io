@@ -69,7 +69,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 35
+			文章总数 43
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -170,20 +170,280 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-读书笔记/20190509_[Notes]_如何快速学习一门技术" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/20190810_[Eassy]_《哪吒之魔童降世》观后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/如何快速学习一门技术.html">如何快速学习一门技术</a>
+      <a class="article-title" href="/随笔/《哪吒之魔童降世》观后感.html">《哪吒之魔童降世》观后感</a>
     </h1>
   
 
         
-        <a href="/读书笔记/如何快速学习一门技术.html" class="archive-article-date">
-  	<time datetime="2019-05-09T05:55:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+        <a href="/随笔/《哪吒之魔童降世》观后感.html" class="archive-article-date">
+  	<time datetime="2019-08-10T15:02:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/assets/blogImg/哪吒之魔童降世.jpg">
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活感悟</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/随笔/《哪吒之魔童降世》观后感.html">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-技术分享/ES6/20190805_[ES6]_Promise和setTimeout的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/技术/promise和settimeout的区别.html">Promise和setTimeout的区别</a>
+    </h1>
+  
+
+        
+        <a href="/技术/promise和settimeout的区别.html" class="archive-article-date">
+  	<time datetime="2019-08-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-面试题"><a href="#1-面试题" class="headerlink" title="1 面试题"></a>1 面试题</h2><p>面试题：下面代码的输出结果是什么？</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'start'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      resolve(<span class="number">1</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    p1.then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'==&gt;res:'</span>, res);</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'end'</span>);</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>答案是???</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/技术/promise和settimeout的区别.html">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-技术分享/React/20190725_[React]_diff算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/技术/diff算法.html">diff算法</a>
+    </h1>
+  
+
+        
+        <a href="/技术/diff算法.html" class="archive-article-date">
+  	<time datetime="2019-07-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-diff简介"><a href="#1-diff简介" class="headerlink" title="1.diff简介"></a>1.diff简介</h2><img src="/assets/blogImg/React高性能原理图.JPG">
+
+<p>作用：计算出Virtual DOM中<strong>真正变化</strong>的部分，并只针对该部分进行原生DOM操作，而非渲染整个页面，从而达到<strong>高效渲染</strong></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/技术/diff算法.html">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-技术分享/异常处理/20190723_[Antd]_Antd Form中用自定义组件submit获取不到对应" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/技术/antd-form中用自定义组件submit获取不到对应的值.html">Antd Form中用自定义组件submit获取不到对应的值</a>
+    </h1>
+  
+
+        
+        <a href="/技术/antd-form中用自定义组件submit获取不到对应的值.html" class="archive-article-date">
+  	<time datetime="2019-07-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
 </a>
         
       </header>
@@ -191,10 +451,209 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p><strong>高手指点：遇见高手早点混熟</strong></p>
+<p>本文完整示例代码点击<a href="https://github.com/salenju/Blog-codes/tree/master/src/FormGetValue" target="_blank" rel="noopener">这里&gt;&gt;</a></p>
 </blockquote>
-<p><em>2019-5-9：做任何事都不要埋头死干，要寻求身边的资源来让自己花最小的成本，最少的时间，最快的掌握、使用这门技术。毕竟你最终的目的就是为了学会如何使用这门技术。在别人的经验基础之上去学习可以少走很多弯路。遇见比自己厉害的人投其所好的和他混熟，方便日后向他请教问题。</em></p>
+<h2 id="0-异常场景"><a href="#0-异常场景" class="headerlink" title="0 异常场景"></a>0 异常场景</h2><p>可能很多人和我一样在使用React + Ant Design开发项目时都曾遇到过这样一个场景：</p>
+<p>首先，使用无状态方式自定义城市选择组件<code>CitySelect</code></p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// CitySelect.js</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; observer &#125; <span class="keyword">from</span> <span class="string">'mobx-react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Select &#125; <span class="keyword">from</span> <span class="string">'antd'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; Option &#125; = Select</span><br><span class="line"><span class="keyword">const</span> CitySelect = observer(<span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Select</span><br><span class="line">      showSearch</span><br><span class="line">      allowClear</span><br><span class="line">      style=&#123;&#123; <span class="attr">width</span>: <span class="number">200</span> &#125;&#125;</span><br><span class="line">      placeholder=<span class="string">"Select a city"</span></span><br><span class="line">      optionFilterProp=<span class="string">"children"</span></span><br><span class="line">      filterOption=&#123;(input, option) =&gt;</span><br><span class="line">        option.props.children.toLowerCase().indexOf(input.toLowerCase()) &gt;= <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &gt;</span><br><span class="line">      &lt;Option value=<span class="string">"SH"</span>&gt;上海&lt;<span class="regexp">/Option&gt;</span></span><br><span class="line"><span class="regexp">      &lt;Option value="BJ"&gt;北京&lt;/</span>Option&gt;</span><br><span class="line">      &lt;Option value=<span class="string">"SZ"</span>&gt;深圳&lt;<span class="regexp">/Option&gt;</span></span><br><span class="line"><span class="regexp">      &lt;Option value="XIAN"&gt;西安&lt;/</span>Option&gt;</span><br><span class="line">    &lt;<span class="regexp">/Select&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default CitySelect</span></span><br></pre></td></tr></table></figure>
+
+<p>其次，在<code>UserInfoForm</code>中引用自定义组件<code>CitySelect</code></p>
+<img src="/assets/blogImg/引用无状态组件报错-01.JPG">
+
+<p>当点击提交按钮时，因Form没有获取到对应自定义组件的值，从而报错，报错信息如下图：</p>
+<img src="/assets/blogImg/引用无状态组件报错-02.JPG">
+
+<p>怎样才能使得<code>Form.Item</code> 包裹一个第三方组件或者自定义组件时，在点击submit时可以获取到对应组件的值呢？</p>
         
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Ant Design</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/技术/antd-form中用自定义组件submit获取不到对应的值.html">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-技术分享/JavaScript/20190718_[JS]_深入理解call,aplly和bind" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/技术/深入理解call-aplly和bind.html">深入理解call,aplly和bind</a>
+    </h1>
+  
+
+        
+        <a href="/技术/深入理解call-aplly和bind.html" class="archive-article-date">
+  	<time datetime="2019-07-18T14:55:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-call-applay-bind的基本介绍及区别"><a href="#1-call-applay-bind的基本介绍及区别" class="headerlink" title="1 call,applay,bind的基本介绍及区别"></a>1 call,applay,bind的基本介绍及区别</h2><img src="/assets/blogImg/call,applay,bind的基本介绍及区别.JPG">
+
+<p>注意：<code>fun</code>的<code>this</code>指向<code>thisArg</code>对象，如果<code>thisArg</code>传入的是<code>null</code>或者<code>undefined</code>：</p>
+<ul>
+<li>非严格模式：<code>fun</code>中的<code>this</code>绑定到全局对象，函数运行时<code>this</code>指向顶层对象（浏览器为window）</li>
+<li>严格模式：<code>fun</code>的<code>this</code>为<code>undefined</code></li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/技术/深入理解call-aplly和bind.html">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-读书笔记/20190604_[Notes]_《简七理财系列》02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/读书笔记/《简七理财系列》-02-2个微习惯，拥有第1桶金.html">《简七理财系列》-02 2个微习惯，拥有第1桶金</a>
+    </h1>
+  
+
+        
+        <a href="/读书笔记/《简七理财系列》-02-2个微习惯，拥有第1桶金.html" class="archive-article-date">
+  	<time datetime="2019-06-04T06:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>微习惯：就是从那些微不足道，甚至有些不痛不痒的小改变开始</strong></p>
+</blockquote>
+<h4 id="微习惯一：改变存钱的顺序，先储蓄后消费"><a href="#微习惯一：改变存钱的顺序，先储蓄后消费" class="headerlink" title="微习惯一：改变存钱的顺序，先储蓄后消费"></a>微习惯一：改变存钱的顺序，先储蓄后消费</h4><blockquote>
+<p><strong>收入-必要支出-储蓄 = 非必要支出</strong></p>
+</blockquote>
+<p>按照上述公式既可以完成储蓄又可以一定程度上控制不理性消费</p>
+<h4 id="微习惯二：从小钱开始，建立具体的存钱计划"><a href="#微习惯二：从小钱开始，建立具体的存钱计划" class="headerlink" title="微习惯二：从小钱开始，建立具体的存钱计划"></a>微习惯二：从小钱开始，建立具体的存钱计划</h4><ul>
+<li>Where：支付宝“蚂蚁星愿”</li>
+<li>When：每周一</li>
+<li>How mouch：以200作为起存数，后续每周在前一次的基础上+15</li>
+</ul>
+<p><strong>【我的疑问】</strong></p>
+<p> 暂无</p>
+
       
 
       
@@ -228,7 +687,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/如何快速学习一门技术.html">阅读全文 >></a>
+          <a class="article-more-a" href="/读书笔记/《简七理财系列》-02-2个微习惯，拥有第1桶金.html">阅读全文 >></a>
         </p>
       
 
@@ -258,28 +717,51 @@
 
 
   
-    <article id="post-读书笔记/20180922_[JS]_2018云栖大会-机器革命 人工智能峰会" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-读书笔记/20190602_[Notes]_《简七理财系列》01 " class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html">2018云栖大会-机器革命 人工智能峰会</a>
+      <a class="article-title" href="/读书笔记/《简七理财系列》-01-掌握1个公式，变富不再难.html">《简七理财系列》-01 掌握1个公式，变富不再难</a>
     </h1>
   
 
         
-        <a href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html" class="archive-article-date">
-  	<time datetime="2018-09-22T13:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
+        <a href="/读书笔记/《简七理财系列》-01-掌握1个公式，变富不再难.html" class="archive-article-date">
+  	<time datetime="2019-06-02T06:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、陈丽娟——阿里巴巴人工智能实验室总经理"><a href="#一、陈丽娟——阿里巴巴人工智能实验室总经理" class="headerlink" title="一、陈丽娟——阿里巴巴人工智能实验室总经理"></a>一、陈丽娟——阿里巴巴人工智能实验室总经理</h2><h3 id="1-这个时代的创新机会在哪儿？"><a href="#1-这个时代的创新机会在哪儿？" class="headerlink" title="1.这个时代的创新机会在哪儿？"></a>1.这个时代的创新机会在哪儿？</h3><p>​    完全的创新机会是很小的，<strong>重组（自由组合）</strong>才是这个时代的重要创新来源</p>
-        
+        <p>1.什么是复利？</p>
+<p>复利就是：钱生利，利滚利</p>
+<p>2.复利如何计算？</p>
+<blockquote>
+<p>未来的钱 = 现在的钱 × （1 + 每期利率）^计息的期数</p>
+</blockquote>
+<p>3.影响复利的因素？</p>
+<ul>
+<li>本金</li>
+<li>时间</li>
+<li>利率</li>
+<li></li>
+</ul>
+<p>4.通货膨胀让你“不进则退”</p>
+<p>不理财才是最大的风险，因为通货膨胀会让你的钱贬值、缩水，理财第一步就是要跑赢通货膨胀</p>
+<p>5.现在我能做什么？</p>
+<p>在影响复利的三要素中，目前我能做的有三点:</p>
+<ul>
+<li>本金——努力积累自己的第一桶金，让自己拥有更多的本金</li>
+<li>利率——开始关注投资回报率，首先要跑赢通货膨胀</li>
+<li>时间——尽早开始理财，以获得更大的收益</li>
+</ul>
+<p><strong>【我的疑问】</strong></p>
+<p>定投基金该如何选择？</p>
+
       
 
       
@@ -292,7 +774,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
         		</li>
       		
 		</ul>
@@ -313,7 +795,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/2018云栖大会-机器革命-人工智能峰会.html">阅读全文 >></a>
+          <a class="article-more-a" href="/读书笔记/《简七理财系列》-01-掌握1个公式，变富不再难.html">阅读全文 >></a>
         </p>
       
 
@@ -343,129 +825,50 @@
 
 
   
-    <article id="post-技术分享/JavaScript/20190815_[JS]_从url输入到页面架加载发生了什么？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-读书笔记/20190524_[Notes]_一个人的上限取决于这3件事" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/技术/从url输入到页面架加载发生了什么？.html">从url输入到页面架加载发生了什么？</a>
+      <a class="article-title" href="/读书笔记/一个人的上限取决于这3件事.html">一个人的上限取决于这3件事</a>
     </h1>
   
 
         
-        <a href="/技术/从url输入到页面架加载发生了什么？.html" class="archive-article-date">
-  	<time datetime="2018-08-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
+        <a href="/读书笔记/一个人的上限取决于这3件事.html" class="archive-article-date">
+  	<time datetime="2019-05-24T13:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="0-总体分为以下几个过程"><a href="#0-总体分为以下几个过程" class="headerlink" title="0.总体分为以下几个过程"></a>0.总体分为以下几个过程</h3><ul>
-<li>DNS解析</li>
-<li>TCP连接</li>
-<li>HTTP请求</li>
-<li>服务器处理HTTP请求并返回HTTP报文</li>
-<li>浏览器解析渲染页面</li>
-<li>连接结束</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/从url输入到页面架加载发生了什么？.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术分享/JavaScript/20180727_[JS]_TCP三次握手" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/tcp三次握手.html">TCP三次握手</a>
-    </h1>
-  
-
-        
-        <a href="/技术/tcp三次握手.html" class="archive-article-date">
-  	<time datetime="2018-07-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>TCP通信包括三个步骤：</p>
+        <blockquote>
+<p><strong>老天的事：大成者皆为时运使然</strong></p>
+</blockquote>
+<p><em>2019-5-14：“接受那些不能改变的，改变那些可以改变的”，想要成功很多时候是要靠“时运”的，只是在他们成功之后在大众面前为了扎到正能量的说辞，才故意放大了自身的努力、勤奋而刻意去隐藏了“时运”这个重要的因素。</em></p>
+<blockquote>
+<p><strong>别人的事：人脉既是金手指，又是推进器</strong></p>
+</blockquote>
+<p>2019-5-14：<strong>“伟大的事情其实都是从一个party开始的”</strong>一些来自各行各业的人聚集在一起，在轻松愉悦的氛围中来谈天说地，说不定就能激发出不同的灵感。而对于我来说，最擅长的事情有三件：</p>
 <ul>
-<li>建立链接（三次握手）</li>
-<li>传输数据</li>
-<li>断开链接（四次挥手）</li>
+<li>*<em>废物利用 *</em>—— 总能从生活“垃圾”中寻找到灵感，废物利用设计出满足需求的东西</li>
+<li><strong>厨艺很赞</strong> —— 自认为还不错的厨艺可以在欢聚的时刻为大家带来美食，增添亲和力，拉进彼此的关系</li>
+<li><strong>细心周到</strong> —— 能关注到很多细节，从细节出发去打动人，获取好感</li>
 </ul>
-<img src="/assets/blogImg/TCP三次握手.jpg">
+<p>办公室，白天办公，晚上就可以成为休闲的好地方，让员工和朋友<strong>爱上令人讨厌的办公室</strong></p>
+<img src="/assets/blogImg/摩拜部件.jpg">
 
-<p>参考资料</p>
+<p>​                    摩拜最早成型的部件</p>
+<p>（来自自家汽车CEO——王超的手绘图纸和我画的有得一拼，至少我自己这么认为）</p>
+<blockquote>
+<p><strong>自己的事：你的成就和偏执有关</strong></p>
+</blockquote>
+<p><em>2019-5-14：当你的一个idea说出来后，周围的人都觉得你是“异想天开”的时候，你就应该再次认真的思考下这个idea，因为它很大程度上是可行的</em></p>
 <ul>
-<li><a href="https://baijiahao.baidu.com/s?id=1618114723935605183&wfr=spider&for=pc" target="_blank" rel="noopener">TCP协议：三次握手过程详解</a></li>
+<li><a href="https://mp.weixin.qq.com/s/qfgRZRhbnQ_xbORP-_JOkA" target="_blank" rel="noopener">参考资料</a></li>
 </ul>
 
       
@@ -480,7 +883,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客美文</a>
         		</li>
       		
 		</ul>
@@ -492,7 +895,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
         		</li>
       		
 		</ul>
@@ -501,385 +904,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/技术/tcp三次握手.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术分享/JavaScript/20180720_[JS]_防抖和节流的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/防抖和节流的实现.html">防抖和节流的实现</a>
-    </h1>
-  
-
-        
-        <a href="/技术/防抖和节流的实现.html" class="archive-article-date">
-  	<time datetime="2018-07-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-防抖（debounce）"><a href="#1-防抖（debounce）" class="headerlink" title="1 防抖（debounce）"></a>1 防抖（debounce）</h2><p>常见的滚动监听事件，每次滚动都会触发，如此太过浪费性能，要如何优化呢？</p>
-<p><strong>思路</strong>：在第一次触发事件的时候，不是立即执行函数，而是给出一个<code>delay</code>时间值，例如<code>200ms</code></p>
-<ul>
-<li>如果在<code>200ms</code>内没有再次触发该事件，则执行函数</li>
-<li>如果在<code>200ms</code>内有再次触发事件，则清除当前的计时器，重新开始计时器</li>
-</ul>
-<p><strong>效果</strong>：短时间内大量出发同一事件最终只会执行一次</p>
-<p><strong>实现</strong>：利用<code>setTimeOut</code>来实现计时器的功能</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="keyword">const</span> debounce = <span class="function">(<span class="params">fn, delay</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @param [Function] fn 需要使用防抖的函数</span></span><br><span class="line"><span class="comment">     * @param [Number] delay 毫秒，防抖期限值</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">            <span class="comment">// 进入此分支说明：当前正在一个计时周期中，并且再次触发了事件,取消当前计时，重新开始计时</span></span><br><span class="line">            clearTimeout(timer)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 进入此分支说明：当前没有计时，则开始新的计时</span></span><br><span class="line">        timer = setTimeout(fn, delay)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> showTop = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> scrollTop = <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement.scrollTop</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'当前位置：'</span> + scrollTop)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.onscroll = debounce(showTop, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>定义</strong>：<strong>短时间内连续触发的事件，防抖可以让在某个时间期限内事件函数只执行一次</strong></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/防抖和节流的实现.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术分享/JavaScript/20180715_[JS]_作用域和闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/作用域和闭包.html">作用域和闭包</a>
-    </h1>
-  
-
-        
-        <a href="/技术/作用域和闭包.html" class="archive-article-date">
-  	<time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-什么是作用域？如何理解作用域链？"><a href="#1-什么是作用域？如何理解作用域链？" class="headerlink" title="1 什么是作用域？如何理解作用域链？"></a>1 什么是作用域？如何理解作用域链？</h2><h3 id="1-1-作用域：当前执行代码对变量的访问权限"><a href="#1-1-作用域：当前执行代码对变量的访问权限" class="headerlink" title="1.1  作用域：当前执行代码对变量的访问权限"></a>1.1  作用域：当前执行代码对变量的访问权限</h3><ul>
-<li>作用域最大的用处就是<strong>隔离变量</strong>，不同作用域下同名变量不会有冲突</li>
-<li>作用域中变量的值是在执行过程中产生并确定的，但作用域却是在函数创建的时候确定的</li>
-</ul>
-<img src="/assets/blogImg/作用域.JPG">
-
-<h3 id="1-2-作用域链"><a href="#1-2-作用域链" class="headerlink" title="1.2  作用域链"></a>1.2  作用域链</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">f</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">20</span>;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        f();</span><br><span class="line">    &#125;)()</span><br><span class="line">&#125;</span><br><span class="line">show(fn);   <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
-
-<p>​    在作用域中使用的变量，却没有在当前作用域中声明，则需要到另一个作用域中取</p>
-<p>​    要到<strong>创建</strong>这个函数的作用域中取值，而非<strong>调用</strong>这个函数的作用域中取值</p>
-<p>​    如果在上一个作用域中没有找到就继续向上跨，知道跨到全局作用域为止</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/作用域和闭包.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术分享/JavaScript/20180707_[JS]_深入理解JS变量提升和函数提升" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/深入理解js变量提升和函数提升.html">深入理解JS变量提升和函数提升</a>
-    </h1>
-  
-
-        
-        <a href="/技术/深入理解js变量提升和函数提升.html" class="archive-article-date">
-  	<time datetime="2018-07-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-作用域简介"><a href="#1-作用域简介" class="headerlink" title="1 作用域简介"></a>1 作用域简介</h3><ul>
-<li>作用域最大的用处：隔离变量，不同作用域下同名变量之间不会有冲突</li>
-<li>作用域中变量值在执行过程中产生，而作用域却是在函数创建时确定了</li>
-</ul>
-<img src="/assets/blogImg/作用域01.JPG">
-
-
-
-<h3 id="2-变量提升"><a href="#2-变量提升" class="headerlink" title="2 变量提升"></a>2 变量提升</h3><p>在<code>ES6</code>还没有出来的之前，JavaScript只有<strong>全局作用域</strong>和<strong>函数作用域</strong>，并没有<strong>块级作用域</strong>（一个{ }即为一个块级作用域）的概念。无论var声明的变量处于当前作用域的第几行，都会被提升到作用域的头部，并被初始化为undefined——<strong>变量提升</strong></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/深入理解js变量提升和函数提升.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-技术分享/JavaScript/20180630_[JS]_GET和POST的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/技术/get和post的区别.html">GET和POST的区别</a>
-    </h1>
-  
-
-        
-        <a href="/技术/get和post的区别.html" class="archive-article-date">
-  	<time datetime="2018-06-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h2><h3 id="1-标准区别"><a href="#1-标准区别" class="headerlink" title="1 标准区别"></a>1 标准区别</h3><p>（本标准参考自w3schools）</p>
-<ul>
-<li>GET在浏览器回退时是无害的，而POST会再次提交请求</li>
-<li>GET产生的URL可以被Bookmark，而POST则不可以</li>
-<li>GET请求只支持url编码，而POST支持多种编码（<em>具体哪几种？</em>）</li>
-<li>GET请求参数会被完整的保留在浏览器历史记录中，而POST中的参数不会被保留</li>
-<li>GET请求在URL中传递的参数是有<strong>长度限制</strong>的，而POST则没有限制</li>
-<li>对参数的数据类型，GET只接受ASCII字符（<em>这是什么？</em>），而POST没有要求</li>
-<li>GET比POST<strong>更不安全</strong>，因为GET直接将参数暴露在URL上，故不能用来传递敏感信息</li>
-<li>GET参数通过URL传递，POST放在Request body中</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/技术/get和post的区别.html">阅读全文 >></a>
+          <a class="article-more-a" href="/读书笔记/一个人的上限取决于这3件事.html">阅读全文 >></a>
         </p>
       
 
@@ -911,7 +936,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 
@@ -1018,11 +1043,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
+                <a href="javascript:void(0)" class="js-tag color2">《人类简史》</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">《商业的本质》</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1038,11 +1071,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">

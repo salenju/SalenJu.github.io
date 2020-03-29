@@ -69,7 +69,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 35
+			文章总数 43
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -170,50 +170,180 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-读书笔记/《读懂一本书：樊登读书法》/20200108_[Notes]_05 把书读薄：如何结构一本书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-技术分享/CSS/Units" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Units</title>
+    <style>
+        .box {
+            margin: 10px;
+        }
+
+        .unit-px {
+            font-size: 20px;
+            border: 1px solid #f40;
+            padding: 10px;
+        }
+
+        .unit-rem {
+            font-size: 1rem;
+            border: .1rem solid #f40;
+            padding: 1rem;
+        }
+
+        .unit-em {
+            font-size: 30px;
+            border: .1em solid #f40;
+            padding: 1em;
+        }
+
+        .unit-em p {
+            font-size: 1em;
+        }
+
+        .unit-vh {
+            height: 20vh;
+            background: #0081cc;
+        }
+
+        .unit-vw {
+            width: 70vw;
+            background: #e9e9e9;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box unit-px">
+        <h3>unit-px</h3>
+        <p>font-size: 20px;
+            border: 1px solid #f40;
+            padding: 10px;
+        </p>
+        <p>依据设定的值来展示，不会随着浏览器字体大小改变而改变</p>
+    </div>
+    <div class="box unit-rem">
+        <h3>unit-rem</h3>
+        <p>
+            font-size: 1rem;
+            border: .1rem solid #f40;
+            padding: 1rem;
+        </p>
+        <p>相对浏览器的字体大小来展示，随浏览器字体大小改变而改变</p>
+    </div>
+    <div class="box unit-em">
+        <h3>unit-em</h3>
+        <p>
+            font-size: 30px;
+            border: .1em solid #f40;
+            padding: 1em;
+        </p>
+        <p>相对于父元素字体大小展示，随父元素字体大小改变而改变。如果从父元素直至根元素都没有设置字体大小，则相对于浏览器字体大小展示</p>
+    </div>
+    <div class="box unit-vh">
+        <h3>unit-vh</h3>
+        <p> 
+            height: 20vh;
+            background: #0081cc;
+        </p>
+        <p>将当前浏览器是视窗高度等分为100份，例如20vh则表示占当前视窗高度的1/5</p>
+    </div>
+    <div class="box unit-vw">
+        <h3>unit-vw</h3>
+        <p> 
+            width: 70vw;
+            background: #e9e9e9;;
+        </p>
+        <p>将当前浏览器是视窗宽度等分为100份，例如70vw则表示占当前视窗宽度的7/10</p>
+    </div>
+</body>
+
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/uncategorized/.html">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-技术分享/其他/20200308_[Other]_我是如何从Github中找开源项目的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/04-如何读懂一本书.html">04 如何读懂一本书</a>
+      <a class="article-title" href="/技术分享/我是如何从github中找开源项目的.html">我是如何从Github中找开源项目的</a>
     </h1>
   
 
         
-        <a href="/读书笔记/04-如何读懂一本书.html" class="archive-article-date">
-  	<time datetime="2020-01-08T13:34:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
+        <a href="/技术分享/我是如何从github中找开源项目的.html" class="archive-article-date">
+  	<time datetime="2020-03-08T05:13:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-理解力的池子有多大，就能够读懂多难的书"><a href="#1-理解力的池子有多大，就能够读懂多难的书" class="headerlink" title="1 理解力的池子有多大，就能够读懂多难的书"></a>1 理解力的池子有多大，就能够读懂多难的书</h2><ul>
-<li>经济学知识——《经济学的思维方式》</li>
-<li>心理学——《改变心理学的40项研究》</li>
-<li>国学常识</li>
-<li>管理学知识——《非暴力沟通》、《关键对话》、《掌控谈话》、《可复制的领导力》</li>
-<li>逻辑学知识——《思辨与立场》</li>
-<li>哲学知识——《学会提问》、《思辨与立场》、《哲学起步》</li>
-<li>人生经验——《科学史》、《世界观》</li>
-</ul>
-<p>见过世面，阅读足够宽泛，这时候你才能够淡定地对待每一本书，去发现每一本书真实的价值和优点</p>
-<h2 id="2-知识的自我反刍"><a href="#2-知识的自我反刍" class="headerlink" title="2 知识的自我反刍"></a>2 知识的自我反刍</h2><blockquote>
-<p>读完之后放下，给自己一段时间间隔。时间间隔大概为一周。一周时间也差不多忘了快一半。这时候一边回忆一边绘制思维导图，或者写PPT。跟随回忆的过程，再去打开那本书，然后去翻摘抄，这样比边读边画线更有效。因为人的大脑经过了间隔，经过了回忆的挑战，对内容的记忆力就会更强。</p>
-</blockquote>
+        <p>作为最大的程序员交友平台，Github上有很多开源的项目可以供我们学习，但如何快速，准确的找到自己所需的开源项目？是需要一定技巧和方法的，常见搜索语句格式如下：</p>
 <blockquote>
-<p>隔一段时间，挑战自己，回忆内容，这时候才可能记得住。然后做更进一步的挑战——把书讲给别人听。</p>
-</blockquote>
 <ul>
-<li>阅读时尽量少画重点</li>
-<li>读完后给自己一段时间间隔</li>
-<li>挑战大脑，回忆全书，构思思维导图</li>
-<li>把自己当做传播者，加深理解</li>
+<li>in:name example —名字中有“example”</li>
+<li>in:readme example — readme中有“example”</li>
+<li>in:description example —描述中有“example”</li>
+<li>stars:&gt;1000  — star数大于1000的项目</li>
+<li>forks:&gt;1000  —— fork数大于1000的项目</li>
+<li>pushed:&gt;2019-09-01 —  2019年9月1日后有更新的（查看近期是否还在维护）</li>
+<li>language:java  — 用Java编写的项目</li>
 </ul>
-<h2 id="我的收获"><a href="#我的收获" class="headerlink" title="我的收获"></a>我的收获</h2><p><em>2020-01-07</em></p>
-
+</blockquote>
+<p>通过上面这些语法则可以轻松，快速的找到自己想要的开源项目。</p>
+<img src="/assets/blogImg/Github找开源项目.png">
       
 
       
@@ -226,7 +356,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《读懂一本书：樊登读书法》</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技能分享</a>
         		</li>
       		
 		</ul>
@@ -238,7 +368,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        			<a href="/categories/技术分享//" class="article-tag-list-link color5">技术分享</a>
         		</li>
       		
 		</ul>
@@ -247,7 +377,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/04-如何读懂一本书.html">阅读全文 >></a>
+          <a class="article-more-a" href="/技术分享/我是如何从github中找开源项目的.html">阅读全文 >></a>
         </p>
       
 
@@ -277,49 +407,35 @@
 
 
   
-    <article id="post-读书笔记/《读懂一本书：樊登读书法》/20200108_[Notes]_04 如何读懂一本书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/20200126_[Eassy]_《囧妈》免费在线观影后的启示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/04-如何读懂一本书.html">04 如何读懂一本书</a>
+      <a class="article-title" href="/随笔/《囧妈》免费在线观影后的启示.html">《囧妈》免费在线观影后的启示</a>
     </h1>
   
 
         
-        <a href="/读书笔记/04-如何读懂一本书.html" class="archive-article-date">
-  	<time datetime="2020-01-08T13:34:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
+        <a href="/随笔/《囧妈》免费在线观影后的启示.html" class="archive-article-date">
+  	<time datetime="2020-01-26T12:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-理解力的池子有多大，就能够读懂多难的书"><a href="#1-理解力的池子有多大，就能够读懂多难的书" class="headerlink" title="1 理解力的池子有多大，就能够读懂多难的书"></a>1 理解力的池子有多大，就能够读懂多难的书</h2><ul>
-<li>经济学知识——《经济学的思维方式》</li>
-<li>心理学——《改变心理学的40项研究》</li>
-<li>国学常识</li>
-<li>管理学知识——《非暴力沟通》、《关键对话》、《掌控谈话》、《可复制的领导力》</li>
-<li>逻辑学知识——《思辨与立场》</li>
-<li>哲学知识——《学会提问》、《思辨与立场》、《哲学起步》</li>
-<li>人生经验——《科学史》、《世界观》</li>
-</ul>
-<p>见过世面，阅读足够宽泛，这时候你才能够淡定地对待每一本书，去发现每一本书真实的价值和优点</p>
-<h2 id="2-知识的自我反刍"><a href="#2-知识的自我反刍" class="headerlink" title="2 知识的自我反刍"></a>2 知识的自我反刍</h2><blockquote>
-<p>读完之后放下，给自己一段时间间隔。时间间隔大概为一周。一周时间也差不多忘了快一半。这时候一边回忆一边绘制思维导图，或者写PPT。跟随回忆的过程，再去打开那本书，然后去翻摘抄，这样比边读边画线更有效。因为人的大脑经过了间隔，经过了回忆的挑战，对内容的记忆力就会更强。</p>
-</blockquote>
-<blockquote>
-<p>隔一段时间，挑战自己，回忆内容，这时候才可能记得住。然后做更进一步的挑战——把书讲给别人听。</p>
-</blockquote>
+        <p>一部电影的组成部分：</p>
 <ul>
-<li>阅读时尽量少画重点</li>
-<li>读完后给自己一段时间间隔</li>
-<li>挑战大脑，回忆全书，构思思维导图</li>
-<li>把自己当做传播者，加深理解</li>
+<li>出品方——电影投资、制作</li>
+<li>发行方——电影宣传</li>
+<li>放映方——电影放映</li>
+<li>观影方——电影观赏</li>
 </ul>
-<h2 id="我的收获"><a href="#我的收获" class="headerlink" title="我的收获"></a>我的收获</h2><p><em>2020-01-07</em></p>
+<p>抖音和徐峥双赢</p>
+<p>流媒体向电影行业迈进一大步</p>
 
       
 
@@ -333,7 +449,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《读懂一本书：樊登读书法》</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活感悟</a>
         		</li>
       		
 		</ul>
@@ -345,7 +461,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -354,7 +470,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/04-如何读懂一本书.html">阅读全文 >></a>
+          <a class="article-more-a" href="/随笔/《囧妈》免费在线观影后的启示.html">阅读全文 >></a>
         </p>
       
 
@@ -384,48 +500,27 @@
 
 
   
-    <article id="post-读书笔记/《读懂一本书：樊登读书法》/20200108_[Notes]_03 如何选书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-技术分享/JavaScript/20200120_[JS]_webpack 4.0详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/03-如何选书.html">03 如何选书</a>
+      <a class="article-title" href="/技术/webpack-4-0详解.html">webpack 4.0详解</a>
     </h1>
   
 
         
-        <a href="/读书笔记/03-如何选书.html" class="archive-article-date">
-  	<time datetime="2020-01-08T13:34:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
+        <a href="/技术/webpack-4-0详解.html" class="archive-article-date">
+  	<time datetime="2020-01-20T01:17:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-选书原则——TIPS原则"><a href="#1-选书原则——TIPS原则" class="headerlink" title="1  选书原则——TIPS原则"></a>1  选书原则——TIPS原则</h2><ul>
-<li>T（Tools）是工具。“樊登读书”讲的大部分书，基本上都能提炼出工具性的内容。换句话说，这些书都会教给听众一套方法。另外，能够提炼出有效的工具也意味着这本书建立在坚实的实践基础之上。</li>
-<li>I（Ideas）是新的理念。图书的作者能够带来一些新的理念、新的发现、新的想法。</li>
-<li>P（Practicability）是实用性。它能够给大家的生活带来改变，可以应用在日常生活中。</li>
-<li>S（Scientificity）是科学性。它不是凭空捏造，不是简单归纳，它一定经历了科学性的验证过程。</li>
-</ul>
-<h2 id="2-两种衡量事物的角度"><a href="#2-两种衡量事物的角度" class="headerlink" title="2 两种衡量事物的角度"></a>2 两种衡量事物的角度</h2><ul>
-<li>工具性角度：知道这件事未必是这样的，但是它可以很好地解释现有的情况，能为我所用</li>
-<li>现实性角度</li>
-</ul>
-<h2 id="3-具有建设性的书值得去读"><a href="#3-具有建设性的书值得去读" class="headerlink" title="3 具有建设性的书值得去读"></a>3 具有建设性的书值得去读</h2><ul>
-<li>给我们的生活带来新的<strong>意义</strong></li>
-<li>使我们产生强烈的<strong>动力</strong></li>
-<li>给我们的生活带来<strong>改变</strong></li>
-</ul>
-<h2 id="4-思维的三重境界"><a href="#4-思维的三重境界" class="headerlink" title="4 思维的三重境界"></a>4 思维的三重境界</h2><ul>
-<li>底层的人从来不反思，永远觉得自己是对的</li>
-<li>中层的人虽然反思，但老觉得是别人不对</li>
-<li>顶层的人会反思自己，让自己的思维不断进步</li>
-</ul>
-<h2 id="我的收获"><a href="#我的收获" class="headerlink" title="我的收获"></a>我的收获</h2><p><em>2020-01-07</em></p>
-
+        <h2 id="1-因为同源所以跨域"><a href="#1-因为同源所以跨域" class="headerlink" title="1  因为同源所以跨域"></a>1  因为同源所以跨域</h2>
       
 
       
@@ -438,7 +533,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《读懂一本书：樊登读书法》</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -450,7 +545,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -459,7 +554,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/03-如何选书.html">阅读全文 >></a>
+          <a class="article-more-a" href="/技术/webpack-4-0详解.html">阅读全文 >></a>
         </p>
       
 
@@ -489,35 +584,26 @@
 
 
   
-    <article id="post-读书笔记/《读懂一本书：樊登读书法》/20200107_[Notes]_02 工科男的讲书之路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-技术分享/CSS/20200120_[CSS]_CSS中的常用单位" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/02-工科男的讲书之路.html">02 工科男的讲书之路</a>
+      <a class="article-title" href="/技术/css中的常用单位.html">CSS中的常用单位</a>
     </h1>
   
 
         
-        <a href="/读书笔记/02-工科男的讲书之路.html" class="archive-article-date">
-  	<time datetime="2020-01-07T13:34:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
+        <a href="/技术/css中的常用单位.html" class="archive-article-date">
+  	<time datetime="2020-01-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-培养幽默感，吸引眼球"><a href="#1-培养幽默感，吸引眼球" class="headerlink" title="1  培养幽默感，吸引眼球"></a>1  培养幽默感，吸引眼球</h2><ul>
-<li><p><strong>学会说人话</strong></p>
-<blockquote>
-<p>好好说话，客气、和蔼一点。别动不动跟人争论，没有那么多好争论的，有那争论的时间就把事干好，这样多好——崔永元</p>
-</blockquote>
-</li>
-<li><p><strong>积累笑话</strong>：记录生活中遇见的笑话，慢慢培养自己的幽默感</p>
-</li>
-</ul>
         
       
 
@@ -531,7 +617,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《读懂一本书：樊登读书法》</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
@@ -543,7 +629,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -552,7 +638,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/02-工科男的讲书之路.html">阅读全文 >></a>
+          <a class="article-more-a" href="/技术/css中的常用单位.html">阅读全文 >></a>
         </p>
       
 
@@ -582,122 +668,32 @@
 
 
   
-    <article id="post-读书笔记/《读懂一本书：樊登读书法》/20200106_[Notes]_01 会读书，更会讲书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/20200119_[Eassy]_你是真的努力吗" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/读书笔记/会读书，更要会讲书.html">会读书，更要会讲书</a>
+      <a class="article-title" href="/随笔/你是真的努力吗？.html">你是真的努力吗？</a>
     </h1>
   
 
         
-        <a href="/读书笔记/会读书，更要会讲书.html" class="archive-article-date">
-  	<time datetime="2020-01-06T04:42:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+        <a href="/随笔/你是真的努力吗？.html" class="archive-article-date">
+  	<time datetime="2020-01-19T15:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-讲书是最高效的沉浸式学习方法"><a href="#1-讲书是最高效的沉浸式学习方法" class="headerlink" title="1 讲书是最高效的沉浸式学习方法"></a>1 讲书是最高效的沉浸式学习方法</h2><h3 id="1-1-沉浸式学习-VS-观光式学习"><a href="#1-1-沉浸式学习-VS-观光式学习" class="headerlink" title="1.1  沉浸式学习 VS 观光式学习"></a>1.1  沉浸式学习 VS 观光式学习</h3><ul>
-<li><p>观光式学习——</p>
-</li>
-<li><p>沉浸式学习——</p>
-</li>
-</ul>
-<h3 id="1-2-沉浸式学习对思维成长的重要意义"><a href="#1-2-沉浸式学习对思维成长的重要意义" class="headerlink" title="1.2 沉浸式学习对思维成长的重要意义"></a>1.2 沉浸式学习对思维成长的重要意义</h3><h3 id="1-3-以讲书为目的的深度学习"><a href="#1-3-以讲书为目的的深度学习" class="headerlink" title="1.3 以讲书为目的的深度学习"></a>1.3 以讲书为目的的深度学习</h3><h3 id="1-4-讲书带来的长期影响"><a href="#1-4-讲书带来的长期影响" class="headerlink" title="1.4 讲书带来的长期影响"></a>1.4 讲书带来的长期影响</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《读懂一本书：樊登读书法》</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/读书笔记/会读书，更要会讲书.html">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-随笔/20191229_[Eassy]_2019年终总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/随笔/2019年终总结.html">2019年终总结</a>
-    </h1>
-  
-
-        
-        <a href="/随笔/2019年终总结.html" class="archive-article-date">
-  	<time datetime="2019-12-28T15:02:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天是2019/12/28， 一个不用加班的周六，在闲暇的午后沏上一壶茶开始我对2019年的总结。</p>
-<p>按照习惯，我将从以下几个方面来回顾和总结本年度的收获、得失和不足。</p>
+        <p>无论是学生时代还是职场周围不乏看着很努力，整日埋头苦干，最终却成绩一般、业绩平平的人。为什么他们那么”努力“，却没能取得优异的成绩呢？仔细观察会发现生活中的大多数人实际是”假努力“，而非真正的努力。</p>
+<h2 id="假努力的体现"><a href="#假努力的体现" class="headerlink" title="假努力的体现"></a>假努力的体现</h2><p>通常”假努力“可能具有以下几个特征：</p>
 <ul>
-<li>生活</li>
-<li>工作</li>
-<li>爱好</li>
+<li>看上去很努力：在人前表现的很努力，只是为了赢得别人一句”你很努力“的赞美</li>
+<li>突然努力一下：看到周围的人都那么优秀，顿时鸡血满满立志要赶上他们，结果坚持三天后因为太苦还是做回了原本的自己</li>
+<li>不知道为什么而努力：别人努力我也跟着努力，不知道自己为什么而努力</li>
 </ul>
         
       
@@ -733,7 +729,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/随笔/2019年终总结.html">阅读全文 >></a>
+          <a class="article-more-a" href="/随笔/你是真的努力吗？.html">阅读全文 >></a>
         </p>
       
 
@@ -763,30 +759,56 @@
 
 
   
-    <article id="post-随笔/20191125_[Eassy]_网易强制辞退身患绝症员工事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-技术分享/JavaScript/20200119_[JS]_跨域详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/随笔/“网易强制辞退身患绝症员工”事件的一些看法.html">“网易强制辞退身患绝症员工”事件的一些看法</a>
+      <a class="article-title" href="/技术/跨域详解.html">跨域详解</a>
     </h1>
   
 
         
-        <a href="/随笔/“网易强制辞退身患绝症员工”事件的一些看法.html" class="archive-article-date">
-  	<time datetime="2019-11-25T13:15:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-25</time>
+        <a href="/技术/跨域详解.html" class="archive-article-date">
+  	<time datetime="2020-01-19T02:17:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>早晨坐车去上班的途中无意间被朋友圈和知乎的一则新闻刷屏了——“网易裁员，让保安把身患绝症的 5 年老员工赶出公司”。仔细看完全部内容，我不禁想起了3个月前，我现在的东家裁人时的场景，有诸多相似之处。</p>
-<p>这件事经过不断的发酵，网易也终于出面“道歉”，但看了道歉公告的人心里可能更加的为当事人抱不平了。道歉信很官方，也很公关。对比之下我联想到了前不久三星关闭惠州工厂时的员工补偿。一个外企都能做到那么丰厚的辞退补偿，而国内的企业为什么连法律规定的赔偿都不想给呢？</p>
-<p>因为这件事一整天心情都很低落，一来为同是互联网人的当事人刚到不平，二来也在思考职场中的自己。</p>
-        
+        <h2 id="1-因为同源所以跨域"><a href="#1-因为同源所以跨域" class="headerlink" title="1  因为同源所以跨域"></a>1  因为同源所以跨域</h2><h3 id="1-1-何为同源？"><a href="#1-1-何为同源？" class="headerlink" title="1.1  何为同源？"></a>1.1  何为同源？</h3><ul>
+<li>协议</li>
+<li>域名</li>
+<li>端口</li>
+</ul>
+<p>以上三个都一样即是<strong>同源</strong>，否则为<strong>非同源</strong></p>
+<p>举例：<code>http://www.example.com/dir/page.html</code></p>
+<blockquote>
+<p>协议：<code>http://</code></p>
+<p>域名：<code>www.example.com</code></p>
+<p>端口：80（默认端口为80且可省略）</p>
+</blockquote>
+<h3 id="1-2-为什么需要同源？"><a href="#1-2-为什么需要同源？" class="headerlink" title="1.2  为什么需要同源？"></a>1.2  为什么需要同源？</h3><p>同源的目的：保证信息安全，防止恶意的网络窃取数据</p>
+<p>同源的限制范围：</p>
+<ul>
+<li>无法读取非同源网页的Cookie、LocalStorage、IndexedDB</li>
+<li>无法接触非同源网页的DOM</li>
+<li>无法成功向非同源网址发送AJAX请求（可以发送，但是浏览器会拒绝）</li>
+</ul>
+<h3 id="1-3-同源的利与弊"><a href="#1-3-同源的利与弊" class="headerlink" title="1.3  同源的利与弊"></a>1.3  同源的利与弊</h3><p>虽然说同源可以保障信息的安全，但是处于性能的考虑，往往会把不同的资源放置在不同的服务上，会对服务进行拆分。</p>
+<p>服务器拆分：</p>
+<ul>
+<li>web服务器：静态资源——前端代码</li>
+<li>data服务器：业务逻辑和数据分析——API</li>
+<li>图片服务器：图片</li>
+</ul>
+<p><strong>利</strong>：保证信息安全</p>
+<p><strong>弊</strong>：合理的用途也会受到限制，不方便</p>
+<h2 id="2-跨域解决方案"><a href="#2-跨域解决方案" class="headerlink" title="2  跨域解决方案"></a>2  跨域解决方案</h2><h3 id="2-1-JSONP"><a href="#2-1-JSONP" class="headerlink" title="2.1  JSONP"></a>2.1  JSONP</h3><h3 id="2-2-CORS-跨域资源共享"><a href="#2-2-CORS-跨域资源共享" class="headerlink" title="2.2  CORS 跨域资源共享"></a>2.2  CORS 跨域资源共享</h3><h3 id="2-3-http-proxy-代理"><a href="#2-3-http-proxy-代理" class="headerlink" title="2.3  http proxy 代理"></a>2.3  http proxy 代理</h3><p>在目前工程化的项目中，基本都会使用到webpack，而在webpack的配置文件中是可以设置proxyde代理，</p>
+<h3 id="2-4-Websocket"><a href="#2-4-Websocket" class="headerlink" title="2.4  Websocket"></a>2.4  Websocket</h3>
       
 
       
@@ -799,7 +821,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活感悟</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">跨域</a>
         		</li>
       		
 		</ul>
@@ -811,7 +837,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
         		</li>
       		
 		</ul>
@@ -820,7 +846,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/随笔/“网易强制辞退身患绝症员工”事件的一些看法.html">阅读全文 >></a>
+          <a class="article-more-a" href="/技术/跨域详解.html">阅读全文 >></a>
         </p>
       
 
@@ -850,27 +876,34 @@
 
 
   
-    <article id="post-随笔/20191109_[Eassy]_《奶奶最懂得》纪录片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-读书笔记/《人类简史》/20200112_Notes_01 认知革命" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/随笔/《奶奶最懂得》纪录片.html">《奶奶最懂得》纪录片</a>
+      <a class="article-title" href="/读书笔记/《人类简史》-01-认知革命.html">《人类简史》- 01 认知革命</a>
     </h1>
   
 
         
-        <a href="/随笔/《奶奶最懂得》纪录片.html" class="archive-article-date">
-  	<time datetime="2019-11-09T13:15:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-09</time>
+        <a href="/读书笔记/《人类简史》-01-认知革命.html" class="archive-article-date">
+  	<time datetime="2020-01-12T13:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/assets/blogImg/奶奶最懂得.JPG">
+        <h1 id="1-人类：也不是什么特别的动物"><a href="#1-人类：也不是什么特别的动物" class="headerlink" title="1 人类：也不是什么特别的动物"></a>1 人类：也不是什么特别的动物</h1><h2 id="1-1-我们不是唯一的人类"><a href="#1-1-我们不是唯一的人类" class="headerlink" title="1.1 我们不是唯一的人类"></a>1.1 我们不是唯一的人类</h2><p>人类的种类有很多：</p>
+<ul>
+<li>智人</li>
+<li>尼安德特人</li>
+<li>直立人</li>
+<li>梭罗人</li>
+<li>。。。</li>
+</ul>
         
       
 
@@ -884,7 +917,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活感悟</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">《人类简史》</a>
         		</li>
       		
 		</ul>
@@ -896,7 +929,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
         		</li>
       		
 		</ul>
@@ -905,7 +938,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/随笔/《奶奶最懂得》纪录片.html">阅读全文 >></a>
+          <a class="article-more-a" href="/读书笔记/《人类简史》-01-认知革命.html">阅读全文 >></a>
         </p>
       
 
@@ -937,7 +970,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1044,11 +1077,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
+                <a href="javascript:void(0)" class="js-tag color2">《人类简史》</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">《商业的本质》</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技能分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1064,11 +1105,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
